@@ -27,10 +27,10 @@
 Esquecemos de tirar a foto da medida da tensão do transformador, então apenas adicionei esta imagem ilustrativa (a medida do transformador deveria dar 12V).
 
 ## Fluxo do processo
-1. O transformador reduz a tensão da rede elétrica para 12V CA.
-2. A ponte de diodos (com 4 diodos) converte essa corrente alternada (CA) em uma corrente contínua pulsante, que ainda não está estabilizada.
-3. O capacitor armazena carga e libera energia conforme necessário, reduzindo as oscilações da tensão e fornecendo um sinal mais próximo de uma corrente contínua pura.
-4. O regulador de tensão ajusta a tensãoo para 5V CC fixos na saída.
+1. O transformador reduz a tensão da rede elétrica para 12V.
+2. A ponte de diodos (com 4 diodos) converte essa corrente alternada (CA) em uma corrente contínua (CC), que ainda não está estabilizada.
+3. O capacitor armazena carga e libera energia conforme necessário, reduzindo as oscilações da tensão e fornecendo um sinal mais próximo de uma corrente contínua.
+4. O regulador de tensão ajusta a tensão para 5V fixos na saída.
 
 ## Dispositivos utilizados
 - **Tranformador**: converte a tensão da rede elétrica para 12V CA.
