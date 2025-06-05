@@ -53,8 +53,10 @@ O código do projeto possui a seguinte estrutura de pastas:
 
 Para instalar os drivers da placa, primeiro é necessário identificar qual é a versão dela. 
 
-<img alt="NodeMCU V2" src="./Imagens/Versão Placa NodeMCU (V2).png" width="300">
-<img alt="NodeMCU V3" src="./Imagens/Versão Placa NodeMCU (V3).png" width="300">
+<p align="center">
+  <img alt="NodeMCU V2" src="./Imagens/Versão Placa NodeMCU (V2).png" width="300">
+  <img alt="NodeMCU V3" src="./Imagens/Versão Placa NodeMCU (V3).png" width="300">
+</p>
 
 Em seguida, basta acessar o site da Robo Core ([clique aqui](https://www.robocore.net/tutoriais/instalando-driver-do-nodemcu)) para baixar o driver de acordo com seu sistema operacional. Após o download, deve-se descompactar o arquivo e executar o arquivo .exe como administrador. Por fim, dependendo da versão da sua placa, será necessário clicar em **Next** até chegar na última página de instalação para finalizar clicando em **Finish** ou apenas pressionar o botão **Install**.
 
