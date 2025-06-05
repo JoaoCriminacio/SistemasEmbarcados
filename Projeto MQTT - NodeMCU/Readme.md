@@ -5,14 +5,14 @@
   2. [Estrutura de Pastas](#estrutura-de-pastas)
   3. [Pré-requisitos](#pré-requisitos)
   4. [Instalação e Configuração](#instalação-e-configuração)
-      1. [Driver NodeMCU](#driver-nodemcu)
-      2. [PlatformIO](#platformio)
-      3. [Mosquitto](#mosquitto-broker-mqtt)
-      4. [MQTT Explorer](#mqtt-explorer-cliente-gráfico)
+      - 4.1 [Driver NodeMCU](#driver-nodemcu)
+      - 4.2 [PlatformIO](#platformio)
+      - 4.3 [Mosquitto](#mosquitto-broker-mqtt)
+      - 4.4 [MQTT Explorer](#mqtt-explorer-cliente-gráfico)
   5. [Código Fonte](#código-fonte)
-      1. [Configurações Wi-Fi e MQTT](#configurações-wi-fi-e-mqtt)
-      2. [Callback e Controle do LED](#callback-e-controle-do-led)
-      3. [Estrutura de Tópicos](#estrutura-de-tópicos) 
+      - 5.1 [Configurações Wi-Fi e MQTT](#configurações-wi-fi-e-mqtt)
+      - 5.2 [Callback e Controle do LED](#callback-e-controle-do-led)
+      - 5.3 [Estrutura de Tópicos](#estrutura-de-tópicos) 
   6. [Como Compilar e Carregar](#como-compilar-e-carregar)
   7. [Testes e Exemplos](#testes-e-exemplos)
   8. [Estrutura de Tópicos por Cômodo](#estrutura-de-tópicos-por-cômodo)
@@ -27,14 +27,14 @@ Este projeto demonstra a criação de um sistema simples de controle de ilumina�
 O código do projeto possui a seguinte estrutura de pastas:
 
 ```
-├── 📁 .pio/                         ← Pasta interna usada para arquivos de build
+├── 📁 .pio/                      ← Pasta interna usada para arquivos de build
 ├── 📁 .vscode/                   ← Configurações específicas do VSCode
 ├── 📁 include/                   ← Arquivos de cabeçalho
-├── 📁 lib/                           ← Bibliotecas locais específicas do projeto
-├── 📁 src/                           ← Código-fonte principal
-│   └── 📂 main.cpp            ← Arquivo principal do projeto
-├── 📁 test/                          ← Testes unitários
-├── 📄 platformio.ini           ← Arquivo de configuração do projeto
+├── 📁 lib/                       ← Bibliotecas locais específicas do projeto
+├── 📁 src/                       ← Código-fonte principal
+│   └── 📂 main.cpp               ← Arquivo principal do projeto
+├── 📁 test/                      ← Testes unitários
+├── 📄 platformio.ini             ← Arquivo de configuração do projeto
 ```
 
 # Pré-requisitos
