@@ -78,7 +78,7 @@ Para criar um projeto, depois de instalar a extensão, será apresentado um íco
 <img alt="Instalação PlatformIO" src="./Imagens/PlatformIO (2).png" width="900">
 </p>
 
-Por último, é preciso preencher o nome do projeto, selecionar a placa **NodeMCU 1.0 (ESP-12E Module)** e clicar em **Finish**. Dessa forma, um novo projeto será criado
+Por último, é preciso preencher o nome do projeto, selecionar a placa **NodeMCU 1.0 (ESP-12E Module)** e clicar em **Finish**. Dessa forma, um novo projeto será criado.
 
 <p align="center">
 <img alt="Instalação PlatformIO" src="./Imagens/PlatformIO (3).png" width="450">
@@ -219,7 +219,29 @@ casa/cômodo/led/status
 
 # Como Compilar e Carregar
 
+Para compilar e carregar, primeiramente você deve conectar a placa NodeMCU ao seu computador através de um cabo micro USB. Então, abra o projeto no Vs Code e, no canto superior direito da tela, pressione o botão para **buildar** [✅] que serve para compilar o código.
 
+<p align="center">
+<img alt="Compilar e Carregar" src="./Imagens/Compilar e Carregar (1).png" width="350">
+</p>
+
+Posteriormente, selecione a opção para fazer o **upload** [➡️], enviando o programa para a placa. Nessa etapa, será detectado automaticamente em qual porta USB a placa está conectada em sua máquina.
+
+<p align="center">
+<img alt="Compilar e Carregar" src="./Imagens/Compilar e Carregar (2).png" width="350">
+</p>
+
+Ao final, clique no botão com ícone de tomada (Monitor Serial) [🔌] para que a placa possa se comunicar com o computador. Dessa maneira, é possível acompanhar as mensagens de conexão.
+
+<p align="center">
+<img alt="Compilar e Carregar" src="./Imagens/Compilar e Carregar (3).png" width="350">
+</p>
+
+Lembrando que esses botões também estão disponíveis na barra inferior do VS Code, e você pode utilizá-los para realizar cada uma das ações também.
+
+<p align="center">
+<img alt="Compilar e Carregar" src="./Imagens/Compilar e Carregar (4).png" width="1400">
+</p>
 
 # Testes e Exemplos
 
