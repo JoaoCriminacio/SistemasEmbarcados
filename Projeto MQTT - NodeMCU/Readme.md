@@ -102,6 +102,12 @@ lib_deps =
  knolleary/PubSubClient
 ```
 
+Ademais, ao abrir o aplicativo, é obrigatório informar o **Host** como **127.0.0.1** ou **localhost**, a **Porta 1883** e pressionar o botão **Connect**. Caso queira, você pode alterar o nome da conexão no campo **Name**.
+
+<p align="center">
+<img alt="Instalação PlatformIO" src="./Imagens/MQTT Explorer.png" width="600">
+</p>
+
 # Código Fonte
 
 O código desse projeto está na pasta **Sistemas Embarcados > Projeto MQTT - NodeMCU > src**.
