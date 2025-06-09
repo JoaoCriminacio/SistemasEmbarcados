@@ -54,8 +54,8 @@ O código do projeto possui a seguinte estrutura de pastas:
 Para instalar os drivers da placa, primeiro é necessário identificar qual é a versão dela. 
 
 <p align="center">
-  <img alt="NodeMCU V2" src="./Imagens/Versão Placa NodeMCU (V2).png" width="300">
-  <img alt="NodeMCU V3" src="./Imagens/Versão Placa NodeMCU (V3).png" width="300">
+  <img alt="NodeMCU V2" src="./Imagens/Versão Placa NodeMCU (V2).png" width="400">
+  <img alt="NodeMCU V3" src="./Imagens/Versão Placa NodeMCU (V3).png" width="400">
 </p>
 
 Em seguida, basta acessar o site da Robo Core ([clique aqui](https://www.robocore.net/tutoriais/instalando-driver-do-nodemcu)) para baixar o driver de acordo com seu sistema operacional. Após o download, deve-se descompactar o arquivo e executar o arquivo .exe como administrador. Por fim, dependendo da versão da sua placa, será necessário clicar em **Next** até chegar na última página de instalação para finalizar clicando em **Finish** ou apenas pressionar o botão **Install**.
@@ -67,7 +67,7 @@ Em seguida, basta acessar o site da Robo Core ([clique aqui](https://www.robocor
 Para baixar o PlatformIO será necessário abrir seu Visual Studio Code, por conseguinte, ir na aba **Extensões**, pesquisar por PlatformIO, clicar na extensão em questão e então em **Install**.
 
 <p align="center">
-<img alt="Instalação PlatformIO" src="./Imagens/PlatformIO (1).png" width="900">
+<img alt="Instalação PlatformIO" src="./Imagens/PlatformIO (1).png" width="1000">
 </p>
 
 ### Criação do Projeto
@@ -75,13 +75,13 @@ Para baixar o PlatformIO será necessário abrir seu Visual Studio Code, por con
 Para criar um projeto, depois de instalar a extensão, será apresentado um ícone na barra vertical a esquerda da tela, logo, você irá clicar nele, em seguida, em **Create New Project** e em **+ New Project**.
 
 <p align="center">
-<img alt="Instalação PlatformIO" src="./Imagens/PlatformIO (2).png" width="900">
+<img alt="Instalação PlatformIO" src="./Imagens/PlatformIO (2).png" width="1000">
 </p>
 
 Por último, é preciso preencher o nome do projeto, selecionar a placa **NodeMCU 1.0 (ESP-12E Module)** e clicar em **Finish**. Dessa forma, um novo projeto será criado.
 
 <p align="center">
-<img alt="Instalação PlatformIO" src="./Imagens/PlatformIO (3).png" width="450">
+<img alt="Instalação PlatformIO" src="./Imagens/PlatformIO (3).png" width="400">
 </p>
 
 ## Mosquitto (Broker MQTT)
@@ -228,25 +228,25 @@ casa/cômodo/led/status
 Para compilar e carregar, primeiramente você deve conectar a placa NodeMCU ao seu computador através de um cabo micro USB. Então, abra o projeto no Vs Code e, no canto superior direito da tela, pressione o botão para **buildar** [✅] que serve para compilar o código.
 
 <p align="center">
-<img alt="Compilar e Carregar" src="./Imagens/Compilar e Carregar (1).png" width="350">
+<img alt="Compilar e Carregar" src="./Imagens/Compilar e Carregar (1).png" width="400">
 </p>
 
 Posteriormente, selecione a opção para fazer o **upload** [➡️], enviando o programa para a placa. Nessa etapa, será detectado automaticamente em qual porta USB a placa está conectada em sua máquina.
 
 <p align="center">
-<img alt="Compilar e Carregar" src="./Imagens/Compilar e Carregar (2).png" width="350">
+<img alt="Compilar e Carregar" src="./Imagens/Compilar e Carregar (2).png" width="400">
 </p>
 
-Ao final, clique no botão com ícone de tomada (Monitor Serial) [🔌] para que a placa possa se comunicar com o computador. Dessa maneira, é possível acompanhar as mensagens de conexão.
+Ao final, clique no botão com ícone de tomada (**Monitor Serial**) [🔌] para que a placa possa se comunicar com o computador. Dessa maneira, é possível acompanhar as mensagens de conexão.
 
 <p align="center">
-<img alt="Compilar e Carregar" src="./Imagens/Compilar e Carregar (3).png" width="350">
+<img alt="Compilar e Carregar" src="./Imagens/Compilar e Carregar (3).png" width="400">
 </p>
 
 Lembrando que esses botões também estão disponíveis na barra inferior do VS Code, e você pode utilizá-los para realizar cada uma das ações também.
 
 <p align="center">
-<img alt="Compilar e Carregar" src="./Imagens/Compilar e Carregar (4).png" width="1400">
+<img alt="Compilar e Carregar" src="./Imagens/Compilar e Carregar (4).png" width="1000">
 </p>
 
 # Testes e Exemplos
@@ -268,5 +268,5 @@ Lembrando que esses botões também estão disponíveis na barra inferior do VS 
 Alunos do 5° período de Sistemas de Informação da Unimater: Eduardo Giasson Correa, João Ricardo Criminácio e Yuri Schenkel. 
 
 <p align="center">
-  <img alt="Trio CCY" src="./Imagens/Trio CCY.jpg" width="500">
+  <img alt="Trio CCY" src="./Imagens/Trio CCY.jpg" width="600">
 </p>
