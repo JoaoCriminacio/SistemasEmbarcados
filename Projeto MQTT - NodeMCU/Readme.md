@@ -92,7 +92,43 @@ listener 1883 0.0.0.0
 allow_anonymous true
 ```
 
-Também, é fundamental criar uma regra no firewall para liberar a porta 1883 TCP como entrada (para Linux não tem necessidade de fazer essa ação).
+### Liberação da porta 1883
+
+Para funcionamento da aplicação, é fundamental criar uma regra no firewall para liberar a porta 1883 TCP como entrada (para Linux não tem necessidade de fazer essa ação). Para a criação, tem de se abrir o **Windows Defender Firewall com Segurança Avançada**, clicar em **Regras de Entrada** e depois em **Nova Regra**.
+
+<p align="center">
+<img alt="Liberação da porta 1883" src="./Imagens/Regra de Entrada (1).png" width="1000">
+</p>
+
+Selecionar o tipo **Porta** e **Avançar**.
+
+<p align="center">
+<img alt="Liberação da porta 1883" src="./Imagens/Regra de Entrada (2).png" width="600">
+</p>
+
+Inserir a porta **1883** na opção de **Portas Locais Específicas** e **Avançar**.
+
+<p align="center">
+<img alt="Liberação da porta 1883" src="./Imagens/Regra de Entrada (3).png" width="600">
+</p>
+
+Marcar a opção **Permitir a Conexão** e **Avançar**.
+
+<p align="center">
+<img alt="Liberação da porta 1883" src="./Imagens/Regra de Entrada (4).png" width="600">
+</p>
+
+Assinalar as três opções (**Domínio**, **Privado** e **Público**) e **Avançar**.
+
+<p align="center">
+<img alt="Liberação da porta 1883" src="./Imagens/Regra de Entrada (5).png" width="600">
+</p>
+
+Digitar um **Nome** para a regra e **Concluir**.
+
+<p align="center">
+<img alt="Liberação da porta 1883" src="./Imagens/Regra de Entrada (6).png" width="600">
+</p>
 
 ## MQTT Explorer (Cliente Gráfico)
 
@@ -243,7 +279,7 @@ Ao final, clique no botão com ícone de tomada (**Monitor Serial**) [🔌] para
 <img alt="Compilar e Carregar" src="./Imagens/Compilar e Carregar (3).png" width="400">
 </p>
 
-Lembrando que esses botões também estão disponíveis na barra inferior do VS Code, e você pode utilizá-los para realizar cada uma das ações também.
+Lembrando que esses botões também estão disponíveis na barra inferior do VS Code, e você pode utilizá-los para realizar cada uma das ações.
 
 <p align="center">
 <img alt="Compilar e Carregar" src="./Imagens/Compilar e Carregar (4).png" width="1000">
