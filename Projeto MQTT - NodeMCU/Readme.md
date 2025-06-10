@@ -316,19 +316,19 @@ Lembrando que esses botões também estão disponíveis na barra inferior do VS 
 
 # Testes e Exemplos
 
-Para testar, primeiro será necessário rodar o projeto através do **Serial Monitor**, seguidamente, você irá publicar os tópicos no **MQTT Explorer**, para isso, basta na seção **Publish** escrever o tópico em questão e pressionar o botão **Publish**.
+Para testar, primeiro será necessário rodar o projeto através do **Serial Monitor** no VS Code, seguidamente, você irá publicar os tópicos no **MQTT Explorer**, para essa finalidade, basta na seção **Publish** escrever o tópico em questão e pressionar o botão **Publish**.
 
 <p align="center">
 <img alt="Instalação PlatformIO" src="./Imagens/Testes (1).png" width="900">
 </p>
 
-Para alterar o status do led, é preciso navegar até o tópico **set**, alterar para **Raw**, escrever **ON** ou **OFF** e, por fim, pressionar o boão **Publish**.
+Para alterar o status do led, é recomendado navegar até o tópico **set**, alterar para **Raw**, escrever **ON** ou **OFF** e, por fim, pressionar o botão **Publish**.
 
 <p align="center">
 <img alt="Instalação PlatformIO" src="./Imagens/Testes (2).png" width="900">
 </p>
 
-Desse modo, no terminal do VS Code, será apresentado um log dizendo se o led foi ligado ou desligado.
+Desse modo, no terminal onde está rodando a aplicação, será apresentado um log dizendo se o led foi ligado ou desligado.
 
 <p align="center">
 <img alt="Instalação PlatformIO" src="./Imagens/Testes (3).png" width="400">
@@ -356,29 +356,29 @@ Desse modo, no terminal do VS Code, será apresentado um log dizendo se o led fo
 
 # Contribuindo
 
-### 1. Faça um Fork do Repositório
+### 1. Fazer um Fork do Repositório
 
-Crie um fork do projeto, clicando no botão **Fork** no canto superior direito da página do repositório e, seguidamente, aperte em **Create a new fork**. Isso criará uma cópia do projeto no seu próprio GitHub.
-
----
-
-### 2. Clone o Fork para sua Máquina
-
-No seu repositório clonado (fork), copie a URL (HTTPS ou SSH) e execute no terminal da sua máquina ou da IDE o comando ```git clone URL```.
+É necessário criar um fork do projeto, clicando no botão **Fork** no canto superior direito da página do repositório e, seguidamente, apertar em **Create a new fork**. Isso criará uma cópia do projeto no seu próprio GitHub.
 
 ---
 
-### 3. Crie uma nova branch
+### 2. Clonar o Fork para sua Máquina
 
-Comando ```git checkout -b Nome```.
-
----
-
-### 4. Faça as alterações
+No repositório clonado (fork), deve-se copiar a URL (HTTPS ou SSH) e executar no terminal da sua máquina ou da IDE o comando ```git clone URL```.
 
 ---
 
-### 5. Faça o commit e envie ele para o repositório remoto
+### 3. Criar uma nova branch
+
+Comando ```git checkout -b nome-da-sua-branch```.
+
+---
+
+### 4. Fazer as alterações
+
+---
+
+### 5. Fazer o commit e enviar ele para o repositório remoto
 
 Comandos:
 ```
@@ -389,6 +389,6 @@ git push origin nome-da-sua-branch
 
 ---
 
-### 6. Abra um **pull request**
+### 6. Abrir um **pull request**
 
-No seu repositório no GitHub, pressione o botão **Compare & Pull Request**. Após isso, escreva um título e descrição explicando o que foi feito e então clique em **Create Pull Request**.
+No seu repositório do GitHub, precisa-se pressionar o botão **Compare & Pull Request**, após isso, escrever um título e descrição explicando o que foi feito e, para terminar, clicar em **Create Pull Request**.
