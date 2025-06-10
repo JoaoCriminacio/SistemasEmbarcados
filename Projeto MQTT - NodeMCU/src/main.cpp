@@ -1,9 +1,9 @@
 #include <ESP8266WiFi.h>
 #include <PubSubClient.h>
 
-const char* ssid = "Galaxy M515ABA";
-const char* password = "pediuasenha=mamou";
-const char* mqtt_server = "192.168.172.240";
+const char* ssid = "ssid";
+const char* password = "senha";
+const char* mqtt_server = "ip";
 const int mqtt_port = 1883;
 
 const char* sub_topics[] = {

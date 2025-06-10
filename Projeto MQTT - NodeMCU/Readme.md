@@ -1,5 +1,11 @@
 <h1 align="center"> Projeto MQTT - NodeMCU </h1>
 
+Alunos do 5° período de Sistemas de Informação da Unimater: Eduardo Giasson Correa, João Ricardo Criminácio e Yuri Schenkel. 
+
+<p align="center">
+  <img alt="Trio CCY" src="./Imagens/Trio CCY.jpg" width="600">
+</p>
+
 # Sumário
   1. [Visão Geral](#visão-geral)
   2. [Estrutura de Pastas](#estrutura-de-pastas)
@@ -328,6 +334,16 @@ Desse modo, no terminal do VS Code, será apresentado um log dizendo se o led fo
 <img alt="Instalação PlatformIO" src="./Imagens/Testes (3).png" width="400">
 </p>
 
+## Exemplo Prático Feito em Sala de Aula
+
+<p align="center">
+<img alt="Instalação PlatformIO" src="./Imagens/Exemplo (1).jpeg" width="400">
+</p>
+
+<p align="center">
+<img alt="Instalação PlatformIO" src="./Imagens/Exemplo (2).jpeg" width="400">
+</p>
+
 # Estrutura de Tópicos por Cômodo
 
 | Cômodo   | Tópico Set             | Tópico Status             |
@@ -340,8 +356,39 @@ Desse modo, no terminal do VS Code, será apresentado um log dizendo se o led fo
 
 # Contribuindo
 
-Alunos do 5° período de Sistemas de Informação da Unimater: Eduardo Giasson Correa, João Ricardo Criminácio e Yuri Schenkel. 
+### 1. Faça um Fork do Repositório
 
-<p align="center">
-  <img alt="Trio CCY" src="./Imagens/Trio CCY.jpg" width="600">
-</p>
+Crie um fork do projeto, clicando no botão **Fork** no canto superior direito da página do repositório e, seguidamente, aperte em **Create a new fork**. Isso criará uma cópia do projeto no seu próprio GitHub.
+
+---
+
+### 2. Clone o Fork para sua Máquina
+
+No seu repositório clonado (fork), copie a URL (HTTPS ou SSH) e execute no terminal da sua máquina ou da IDE o comando ```git clone URL```.
+
+---
+
+### 3. Crie uma nova branch
+
+Comando ```git checkout -b Nome```.
+
+---
+
+### 4. Faça as alterações
+
+---
+
+### 5. Faça o commit e envie ele para o repositório remoto
+
+Comandos:
+```
+git add .
+git commit -m "Descrição"
+git push origin nome-da-sua-branch
+```
+
+---
+
+### 6. Abra um **pull request**
+
+No seu repositório no GitHub, pressione o botão **Compare & Pull Request**. Após isso, escreva um título e descrição explicando o que foi feito e então clique em **Create Pull Request**.
