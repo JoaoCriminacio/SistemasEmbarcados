@@ -157,7 +157,7 @@ O código desse projeto está na pasta **Sistemas Embarcados > Projeto MQTT - No
 ## Configurações Wi-Fi e MQTT
 
 Inicialmente, são feitas as importações das bibliotecas, definições das credenciais da rede Wi-Fi e das configurações do broker MQTT (IP, porta e tópicos de publicação e assinatura).
-```
+```c++
 #include <ESP8266WiFi.h>
 #include <PubSubClient.h>
 
@@ -190,7 +190,7 @@ PubSubClient client(espClient);
 ```
 
 A função ```setup_wifi()``` conecta o NodeMCU à rede Wi-Fi:
-```
+```c++
 void setup_wifi() {
   Serial.print("Conectando na rede Wi-Fi: ");
   Serial.print(ssid);
@@ -208,7 +208,7 @@ void setup_wifi() {
 ```
 
 A conexão com o broker MQTT é gerenciada pela função ```reconnect()```. Aqui o usuário vai ser comunicado que esta tentando conectar com o broker, se funcionou ou se ocorreu algum problema:
-```
+```c++
 void reconnect() {
     while (!client.connected()) {
         String clientId = "NodeMCU-";
@@ -237,7 +237,7 @@ void reconnect() {
 ## Callback e Controle do LED
 
 O controle do LED ocorre dentro da função ```callback()```, que é acionada sempre que o NodeMCU recebe uma mensagem no tópico ao qual ele está inscrito.
-```
+```c++
 void callback(char* topic, byte* payload, unsigned int length) {
     String msg;
     for (unsigned int i = 0; i < length; i++) {
