@@ -161,10 +161,23 @@ const char* password = "senha";
 const char* mqtt_server = "ip";
 const int mqtt_port = 1883;
 
-const char* sub_topic = "casa/sala/led/set";
-const char* pub_topic = "casa/sala/led/status";
+const char* sub_topics[] = {
+  "casa/sala/led/set",
+  "casa/cozinha/led/set",
+  "casa/quarto1/led/set",
+  "casa/quarto2/led/set",
+  "casa/varanda/led/set"
+};
 
-const uint8_t LED_PIN = D4;
+const char* pub_topics[] = {
+  "casa/sala/led/status",
+  "casa/cozinha/led/status",
+  "casa/quarto1/led/status",
+  "casa/quarto2/led/status",
+  "casa/varanda/led/status"
+};
+
+const uint8_t ledPins[] = { D0, D1, D2, D3, D4 };
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -191,24 +204,27 @@ void setup_wifi() {
 A conexão com o broker MQTT é gerenciada pela função ```reconnect()```. Aqui o usuário vai ser comunicado que esta tentando conectar com o broker, se funcionou ou se ocorreu algum problema:
 ```
 void reconnect() {
-  while (!client.connected()) {
-    String clientId = "NodeMCU-";
-    clientId += String(random(0xffff), HEX);
-    Serial.print("Tentando conectar ao broker MQTT... ID = ");
-    Serial.println(clientId);
+    while (!client.connected()) {
+        String clientId = "NodeMCU-";
+        clientId += String(random(0xffff), HEX);
+        Serial.print("Tentando conectar ao broker MQTT... ID = ");
+        Serial.println(clientId);
 
-    if (client.connect(clientId.c_str())) {
-      Serial.println("Conectado ao broker!");
-      client.subscribe(sub_topic);
-      Serial.print("Inscrito no tópico: ");
-      Serial.println(sub_topic);
-    } else {
-      Serial.print("Falha na conexão. Código de erro: ");
-      Serial.print(client.state());
-      Serial.println(" – tentando novamente em 5 segundos");
-      delay(5000);
+        if (client.connect(clientId.c_str())) {
+            Serial.println("Conectado ao broker!");
+
+            for (int i = 0; i < 5; i++) {
+                client.subscribe(sub_topics[i]);
+                Serial.print("Inscrito no tópico: ");
+                Serial.println(sub_topics[i]);
+            }
+        } else {
+            Serial.print("Falha na conexão. Código de erro: ");
+            Serial.print(client.state());
+            Serial.println(" – tentando novamente em 5 segundos");
+            delay(5000);
+        }
     }
-  }
 }
 ```
 
@@ -217,24 +233,31 @@ void reconnect() {
 O controle do LED ocorre dentro da função ```callback()```, que é acionada sempre que o NodeMCU recebe uma mensagem no tópico ao qual ele está inscrito.
 ```
 void callback(char* topic, byte* payload, unsigned int length) {
-  String msg;
-  for (unsigned int i = 0; i < length; i++) {
+    String msg;
+    for (unsigned int i = 0; i < length; i++) {
     msg += (char)payload[i];
-  }
-  msg.toUpperCase();
+    }
+    msg.toUpperCase();
 
-  if (msg == "ON") {
-    digitalWrite(LED_PIN, HIGH);
-    Serial.println("Recebido 'ON' → LED ligado");
-  } else if (msg == "OFF") {
-    digitalWrite(LED_PIN, LOW);
-    Serial.println("Recebido 'OFF' → LED desligado");
-  } else {
-    Serial.print("Recebido comando desconhecido: ");
+    Serial.print("Mensagem recebida [");
+    Serial.print(topic);
+    Serial.print("]: ");
     Serial.println(msg);
-  }
 
-  client.publish(pub_topic, msg.c_str(), true);
+    for (int i = 0; i < 5; i++) {
+        if (String(topic) == String(sub_topics[i])) {
+        if (msg == "ON") {
+            digitalWrite(ledPins[i], HIGH);
+            Serial.println("→ LED ligado");
+        } else if (msg == "OFF") {
+            digitalWrite(ledPins[i], LOW);
+            Serial.println("→ LED desligado");
+        } else {
+            Serial.println("→ Comando desconhecido");
+        }
+        client.publish(pub_topics[i], msg.c_str(), true);
+        }
+    }
 }
 ```
 
@@ -287,7 +310,23 @@ Lembrando que esses botões também estão disponíveis na barra inferior do VS 
 
 # Testes e Exemplos
 
+Para testar, primeiro será necessário rodar o projeto através do **Serial Monitor**, seguidamente, você irá publicar os tópicos no **MQTT Explorer**, para isso, basta na seção **Publish** escrever o tópico em questão e pressionar o botão **Publish**.
 
+<p align="center">
+<img alt="Instalação PlatformIO" src="./Imagens/Testes (1).png" width="900">
+</p>
+
+Para alterar o status do led, é preciso navegar até o tópico **set**, alterar para **Raw**, escrever **ON** ou **OFF** e, por fim, pressionar o boão **Publish**.
+
+<p align="center">
+<img alt="Instalação PlatformIO" src="./Imagens/Testes (2).png" width="900">
+</p>
+
+Desse modo, no terminal do VS Code, será apresentado um log dizendo se o led foi ligado ou desligado.
+
+<p align="center">
+<img alt="Instalação PlatformIO" src="./Imagens/Testes (3).png" width="400">
+</p>
 
 # Estrutura de Tópicos por Cômodo
 
